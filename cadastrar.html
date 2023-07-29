@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="trab.css" media="all">
+    <title>Trabalho</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="home.html"><img src="imagens/logo.png"></a>
+        </div>
+
+        <nav>
+            
+            <p>Localidades: <select>
+                <option>ㅤ</option>
+                <option>
+                    Es-Vix
+                </option>
+                <option>
+                    Es-VV
+                </option>
+                <option>Es-Serra</option>
+                <option>
+                    Es-St
+                </option>
+
+            </select>
+            </p>
+            <a href="home.html">Inicio</a>
+            <a href="cadastrar.html">Cadastrar</a>
+
+            <div class="barraDePesquisa">
+                <input type="text">
+                <div class="icone">
+                    <img src="icones/lupa.png" alt="PESQUISAR">
+                </div>
+            </div>
+        </nav>
+
+    </header>
+    <div class="header">
+        <h1>Gerenciamento de Consulta</h1>
+    </div>
+    <div class="main">
+        <div class="mainLeft">
+
+            <div class="h3">
+                <h2>Cadastrar Pessoas</h2>
+                <form id="cadastroPessoasForm" method="POST" action="CadastrarPessoas.php">
+                    <label for="inNome">Nome:</label>
+                    <input type="text" class="inputs" id="inNome" name="inNome" required>
+                    <br>
+                    
+                    <label for="inAltura">Altura:</label>
+                    <input type="number"  class="inputs" id="inAltura" name="inAltura" required>
+                    <br>
+                    
+                    <label for="inPeso">Peso:</label>
+                    <input type="number"  class="inputs" id="inPeso" name="inPeso" required>
+                    <br>
+                    
+                    <label for="inDataNascimento">Data de Nascimento:</label>
+                    <input type="date"  class="inputs" id="inDataNascimento" name="inDataNascimento" required>
+                    <br>
+                    
+                    <label for="inConvenio">Convênio:</label>
+                    <input type="text"  class="inputs" id="inConvenio" name="inConvenio" required>
+                    <br>
+                  
+                    <button type="submit"  class="inputs" >Cadastrar</button>
+                  </form>
+            </div>
+
+        </div>
+        <div class="mainRight">
+
+            <div class="h3">
+                <h2>Cadastrar Consultas</h2>
+                <h3>
+                    Paciente<input class="inputs" type="number" placeholder="Insira o codigo da paciente" id="inPaciente" />
+                </h3>
+                <h3>
+                    Data da Consulta<input class="inputs" type="date" placeholder="Insira a data da consulta" id="inDataConsulta"/>
+                </h3>
+                <h3>
+                    Horário da Consulta
+                    <input type="number" id="inHoras" class="time"/> :
+                    <input type="number" id="inMinutos" class="time" />
+                </h3>
+                <h3>
+                    Médico<input class="inputs" type="number" placeholder="Insira o codigo do Medico" id="inMedico" />
+                </h3>
+                <div>
+                <input class="inputs" type="button" value="Cadastrar consulta" id="btCadastrarConsultas" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <pre id="status"></pre>
+        <pre id="outMsg"></pre>
+    </div>
+    </div>
+    <script type="module" src="index.js"></script>
+</body>
+
+</html>

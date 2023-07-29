@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap&display=swap');
+
+:root
+{
+    --font: 'Bebas Neue', sans-serif;
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    text-align: center;
+    font-family: 'Asap', sans-serif;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 15vh 80vh 10vh;
+    grid-template-areas: "h" "m" "f";
+}
+
+
+
+header
+{
+    grid-area: h;
+    background-color: white !important;
+    box-shadow: 0 0 10px black;
+    z-index: 99;
+    color: #019A59;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav
+{
+    color: #019A59;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+select{
+    border: 3px solid #019A59;
+    color: #00995d;
+    border-radius: 8px;
+}
+
+a{
+    text-decoration: none;
+    margin: 0em 10px;
+    color: #019A59;
+}
+
+.barraDePesquisa
+{
+    padding: 2px;
+    color: #019A59;
+    border-radius: 25px;
+    border-color: #019A59;
+    display: flex;
+
+    box-sizing: border-box;
+}
+
+.barraDePesquisa input
+{
+    border: 3px solid #019A59;
+    border-radius: 25px;
+    outline: none;
+
+    background-color: transparent;
+}
+
+.barraDePesquisa .icone
+{
+    height: 30px;
+    width: 30px;
+    fill: #019A59;
+    color: #019A59;
+    padding: 5px;
+
+    box-sizing: border-box;
+}
+
+.barraDePesquisa .icone img
+{
+    height: 100%;
+    width: 100%;
+}
+
+main
+{
+    grid-area: m;
+
+    background-color: white;
+
+    display: flex;
+    flex-flow: column;
+}
+
+#carrosel
+{
+
+    box-shadow: 0 0 10px black;
+}
+#carrosel img{
+    width: 98vw;
+    height: 65vh;
+
+}
+
+#footer{
+grid-area: f;
+}
